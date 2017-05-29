@@ -1,0 +1,16 @@
+!SESSION 2017-05-29 19:43:57.739 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data /home/marcelo/workspace/IHC_Projeto_FINAL -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY com.vaadin.designer2 1 0 2017-05-29 19:44:18.201
+!MESSAGE Image https://vaadin.com/image/image_gallery?uuid=1b16f25c-d29d-402b-8b66-f8d69c6bf87d&groupId=10187&t=1379421069097 is downloaded
+
+!ENTRY com.vaadin.designer2 1 0 2017-05-29 19:44:20.103
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2017-05-29 19:44:42.640
+!MESSAGE All vaadin 7+ projects : []
