@@ -10,6 +10,11 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
+import ihc.views.ExactView;
+import ihc.views.HealthView;
+import ihc.views.HomeView;
+import ihc.views.HumanitiesView;
+
 
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
@@ -28,8 +33,10 @@ public class MyUI extends UI {
 
         navigator = new Navigator(this, this);
 
-        navigator.addView("", new Home());
-
+        navigator.addView("", new HomeView());
+        navigator.addView("Exact", new ExactView());
+        navigator.addView("Humanities", new HumanitiesView());
+        navigator.addView("Health", new HealthView());
 
     }
 

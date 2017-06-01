@@ -1,4 +1,4 @@
-package ihc;
+package ihc.views;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
@@ -10,12 +10,15 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
+import ihc.components.CourseExacts;
+import ihc.components.Header;
+
 import javax.servlet.annotation.WebServlet;
 
 
 @Theme("mytheme")
-public class Exact extends VerticalLayout implements View {
-    public Exact() {
+public class ExactView extends VerticalLayout implements View {
+    public ExactView() {
         final VerticalLayout rootLayout = new VerticalLayout();
 
         rootLayout.setWidth(30, Sizeable.Unit.CM);
@@ -33,11 +36,12 @@ public class Exact extends VerticalLayout implements View {
 //                    + ", it works!"));
 //        });
 
-        Course course = new Course();
+        CourseExacts course = new CourseExacts();
         rootLayout.addComponent(course);
 
         rootLayout.setExpandRatio(header, 1);
         rootLayout.setExpandRatio(course, 9);
+        
     }
 
     @Override

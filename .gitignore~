@@ -29,7 +29,6 @@ ihc_final.iml
 .classpath
 .project
 app/
-.settings/
 
 # Mac
 .DS_Store
