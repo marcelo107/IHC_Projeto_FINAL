@@ -1,5 +1,9 @@
 package ihc.components;
 
+import java.util.Set;
+
+import com.vaadin.data.HasValue;
+import com.vaadin.data.HasValue.ValueChangeEvent;
 import com.vaadin.server.Sizeable;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
@@ -23,6 +27,20 @@ public class CourseExacts extends HorizontalLayout{
         Survey survey = new Survey();
         addComponent(survey);
         setExpandRatio(survey, 20);
+        coursesList.addValueChangeListener(new HasValue.ValueChangeListener<Set<String>>() {
+			
+			@Override
+			public void valueChange(ValueChangeEvent<Set<String>> event) {
+				final Set<String> options = (Set<String>) coursesList.getValue();
+				for(String option : options){
+					if(option.equals("Agronomia")){
+						final Label newLabel = new Label("O curso de Agronomia...");
+						replaceComponent(label, newLabel);
+					}
+				}
+				
+			}
+		});
 //        final TextArea courseData = new TextArea();
 //        course.addComponent(courseData);
     }

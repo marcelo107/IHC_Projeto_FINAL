@@ -1,8 +1,13 @@
-/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/Course.java
 /home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/views/ExactView.java
 /home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/HomeCenter.java
 /home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/Survey.java
 /home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/Header.java
-/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/ihc.java
 /home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/MyUI.java
 /home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/views/HomeView.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/CourseHumanities.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/BreadCrumb.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/CourseExacts.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/views/HealthView.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/ihc.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/components/CourseHealth.java
+/home/marcelo/workspace/IHC_Projeto_FINAL/src/main/java/ihc/views/HumanitiesView.java
