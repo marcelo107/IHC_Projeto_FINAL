@@ -10,10 +10,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
-import ihc.views.ExactView;
-import ihc.views.HealthView;
-import ihc.views.HomeView;
-import ihc.views.HumanitiesView;
+import ihc.views.*;
 
 
 /**
@@ -37,6 +34,7 @@ public class MyUI extends UI {
         navigator.addView("Exact", new ExactView());
         navigator.addView("Humanities", new HumanitiesView());
         navigator.addView("Health", new HealthView());
+        navigator.addView("FAQ", new FAQView());
 
     }
 

@@ -5,8 +5,8 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.ListSelect;
 
-public class CourseHumanities extends HorizontalLayout {
-	public CourseHumanities() {
+public class PanelHumanities extends HorizontalLayout {
+	public PanelHumanities() {
 		setMargin(false);
         setWidth(30, Sizeable.Unit.CM);
         final ListSelect<String> coursesList = new ListSelect<String>("Cursos de humanas.");

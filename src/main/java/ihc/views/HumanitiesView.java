@@ -7,7 +7,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.VerticalLayout;
 
-import ihc.components.CourseHumanities;
+import ihc.components.PanelHumanities;
 import ihc.components.Header;
 
 public class HumanitiesView extends VerticalLayout implements View{
@@ -20,7 +20,7 @@ public class HumanitiesView extends VerticalLayout implements View{
 
 		Header header = new Header();
 		rootLayout.addComponent(header);
-		CourseHumanities course = new CourseHumanities();
+		PanelHumanities course = new PanelHumanities();
 		rootLayout.addComponent(course);
 
 		rootLayout.setExpandRatio(header, 1);

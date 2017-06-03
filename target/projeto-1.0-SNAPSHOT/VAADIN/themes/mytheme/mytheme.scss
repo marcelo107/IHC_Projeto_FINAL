@@ -58,6 +58,21 @@ $v-error-indicator-color: hsl(349, 66%, 56%);
   border-color: first-color(valo-border($color: $v-app-background-color, $strength: 0.5));
 }
 
+.v-select {
+  .v-select-select {
+    width: 240px;
+    height: 500px;
+  }
+}
+
+.v-menubar {
+  width: 1000px;
+}
+
+//.v-label-infoStyle {
+//  height: 500px;
+//}
+
 @mixin mytheme {
   @include valo;
 

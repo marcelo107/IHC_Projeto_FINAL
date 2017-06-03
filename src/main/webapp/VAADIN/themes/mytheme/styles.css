@@ -1538,6 +1538,15 @@ div.v-layout.v-horizontal.v-widget {
 	border-color: #e8e8e8;
 }
 
+.v-select .v-select-select {
+	width: 240px;
+	height: 500px;
+}
+
+.v-menubar {
+	width: 1000px;
+}
+
 .mytheme.v-app, .mytheme.v-app-loading {
 	font: 300 16px/1.55 "Open Sans", sans-serif;
 	color: #474747;

@@ -2,35 +2,33 @@ package ihc.views;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
-import com.vaadin.server.Sizeable;
 import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.VerticalLayout;
-
-import ihc.components.PanelHealth;
 import ihc.components.Header;
+import ihc.components.PanelFAQ;
+import ihc.components.PanelHumanities;
 
-public class HealthView extends VerticalLayout implements View {
-	public HealthView() {
+public class FAQView extends VerticalLayout implements View{
+	public FAQView() {
 		final VerticalLayout rootLayout = new VerticalLayout();
 
-		rootLayout.setWidth(30, Sizeable.Unit.CM);
+		rootLayout.setWidth(30, Unit.CM);
 		addComponent(rootLayout);
 		setComponentAlignment(rootLayout, Alignment.TOP_CENTER);
 
 		Header header = new Header();
 		rootLayout.addComponent(header);
-		PanelHealth course = new PanelHealth();
-		rootLayout.addComponent(course);
+		PanelFAQ panelFAQ = new PanelFAQ();
+		rootLayout.addComponent(panelFAQ);
 
 		rootLayout.setExpandRatio(header, 1);
-		rootLayout.setExpandRatio(course, 9);
+		rootLayout.setExpandRatio(panelFAQ, 9);
 
 	}
 
 	@Override
 	public void enter (ViewChangeListener.ViewChangeEvent event){
-		Notification.show("Bem vindo à página de Saúde.");
+		Notification.show("Bem vindo à página FAQ.");
 	}
-
 }

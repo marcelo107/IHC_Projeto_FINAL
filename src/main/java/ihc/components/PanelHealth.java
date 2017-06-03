@@ -5,8 +5,8 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.ListSelect;
 
-public class CourseHealth extends HorizontalLayout {
-	public CourseHealth() {
+public class PanelHealth extends HorizontalLayout {
+	public PanelHealth() {
 		setMargin(false);
         setWidth(30, Sizeable.Unit.CM);
         final ListSelect<String> coursesList = new ListSelect<String>("Cursos de saúde.");

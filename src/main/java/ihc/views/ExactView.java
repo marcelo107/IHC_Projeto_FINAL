@@ -1,19 +1,13 @@
 package ihc.views;
 
 import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.Sizeable;
-import com.vaadin.server.ThemeResource;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
-import ihc.components.CourseExacts;
+import ihc.components.PanelExacts;
 import ihc.components.Header;
-
-import javax.servlet.annotation.WebServlet;
 
 
 @Theme("mytheme")
@@ -36,7 +30,7 @@ public class ExactView extends VerticalLayout implements View {
 //                    + ", it works!"));
 //        });
 
-        CourseExacts course = new CourseExacts();
+        PanelExacts course = new PanelExacts();
         rootLayout.addComponent(course);
 
         rootLayout.setExpandRatio(header, 1);

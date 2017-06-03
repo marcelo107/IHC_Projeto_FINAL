@@ -33,31 +33,29 @@ public class Header extends HorizontalLayout {
         final MenuBar navBar = new MenuBar();
         MenuItem cursos = navBar.addItem("Cursos",null, null);
         cursos.addItem("Exatas", new MenuBar.Command() {
-			
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
 				MyUI.getCurrent().getNavigator().navigateTo("Exact");
 			}
 		});
         cursos.addItem("Humanas", new MenuBar.Command() {
-			
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
 				MyUI.getCurrent().getNavigator().navigateTo("Humanities");
 			}
 		});
         cursos.addItem("Saúde", new MenuBar.Command() {
-			
 			@Override
-			public void menuSelected(MenuItem selectedItem) {
-				MyUI.getCurrent().getNavigator().navigateTo("Health");
-			}
+			public void menuSelected(MenuItem selectedItem) {MyUI.getCurrent().getNavigator().navigateTo("Health"); }
 		});
         
         navBar.addItem("Testes Vocacionais", null, null);
         navBar.addItem("Vídeos", null, null);
         navBar.addItem("Sobre", null, null);
-        navBar.addItem("FAQ", null, null);
+        navBar.addItem("FAQ", null, new MenuBar.Command() {
+            @Override
+            public void menuSelected(MenuItem selectedItem) {MyUI.getCurrent().getNavigator().navigateTo("FAQ"); }
+        });
         navBar.setWidth("100%");
         addComponent(navBar);
         setComponentAlignment(navBar, Alignment.MIDDLE_LEFT);
