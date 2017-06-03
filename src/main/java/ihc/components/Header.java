@@ -8,6 +8,7 @@ import com.vaadin.ui.Alignment;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Image;
 import com.vaadin.ui.MenuBar;
+import com.vaadin.ui.Notification;
 import com.vaadin.ui.MenuBar.MenuItem;
 
 import ihc.MyUI;
@@ -49,7 +50,32 @@ public class Header extends HorizontalLayout {
 			public void menuSelected(MenuItem selectedItem) {MyUI.getCurrent().getNavigator().navigateTo("Health"); }
 		});
         
-        navBar.addItem("Testes Vocacionais", null, null);
+        MenuItem vocationalTests = navBar.addItem("Testes Vocacionais", null, null); 
+        vocationalTests.addItem("Testes Online", new MenuBar.Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				MyUI.getCurrent().getNavigator().navigateTo("OnlineTests");
+			}
+		});
+        vocationalTests.addItem("Marcar Online", new MenuBar.Command() {
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				Notification note = new Notification("Funcionalidade ainda não implementada!", 
+            			"Em breve essa funcionalidade estará disponível.", 
+            			Notification.Type.WARNING_MESSAGE);
+            	note.show(MyUI.getCurrent().getPage());
+			}
+		});
+        vocationalTests.addItem("Resultados", new MenuBar.Command() {        	        
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				Notification note = new Notification("Funcionalidade ainda não implementada!", 
+            			"Em breve essa funcionalidade estará disponível.", 
+            			Notification.Type.WARNING_MESSAGE);
+            	note.show(MyUI.getCurrent().getPage());
+			}
+		});
         navBar.addItem("Vídeos", null, null);
         navBar.addItem("Sobre", null, null);
         navBar.addItem("FAQ", null, new MenuBar.Command() {
