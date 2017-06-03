@@ -34,6 +34,7 @@ public class PanelExacts extends HorizontalLayout{
         Survey survey = new Survey();
         addComponent(survey);
         setExpandRatio(survey, 20);
+        final InfoAgronomia newInfo = new InfoAgronomia();
         coursesList.addValueChangeListener(new HasValue.ValueChangeListener<Set<String>>() {
 
             @Override
@@ -41,12 +42,11 @@ public class PanelExacts extends HorizontalLayout{
                 Set<String> options = (Set<String>) coursesList.getValue();
                 for(String option : options){
                     if(option.equals("Agronomia")){
-                        final InfoAgronomia newInfo = new InfoAgronomia();
-                        replaceComponent(infoExacts, newInfo);
+                    	if(!components.contains(newInfo)){
+                    		replaceComponent(infoExacts, newInfo);
+                    	}
                     }
                     else {
-//                        final Label newInfo = new Label("O curso ainda não possui informações.");
-//                        replaceComponent(infoExacts, newInfo);
                     	Notification note = new Notification("Funcionalidade ainda não implementada!", 
                     			"Em breve essa funcionalidade estará disponível.", 
                     			Notification.Type.WARNING_MESSAGE);

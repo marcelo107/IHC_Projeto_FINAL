@@ -1,9 +1,16 @@
 package ihc.components;
 
+import java.util.Set;
+
+import com.vaadin.data.HasValue;
+import com.vaadin.data.HasValue.ValueChangeEvent;
 import com.vaadin.server.Sizeable;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.ListSelect;
+import com.vaadin.ui.Notification;
+
+import ihc.MyUI;
 
 public class PanelHumanities extends HorizontalLayout {
 	public PanelHumanities() {
@@ -14,13 +21,21 @@ public class PanelHumanities extends HorizontalLayout {
         coursesList.setRows(10);
         addComponent(coursesList);
         setExpandRatio(coursesList, 25);
-        final Label label = new Label("Aqui vem o texto.");
-        addComponent(label);
-        setExpandRatio(label, 55);
+        InfoHumanities infoHumanities = new InfoHumanities();
+        addComponent(infoHumanities);
+        setExpandRatio(infoHumanities, 55);
         Survey survey = new Survey();
         addComponent(survey);
         setExpandRatio(survey, 20);
-//        final TextArea courseData = new TextArea();
-//        course.addComponent(courseData);
+        coursesList.addValueChangeListener(new HasValue.ValueChangeListener<Set<String>>() {
+
+            @Override
+            public void valueChange(ValueChangeEvent<Set<String>> event) {
+                    	Notification note = new Notification("Funcionalidade ainda não implementada!", 
+                    			"Em breve essa funcionalidade estará disponível.", 
+                    			Notification.Type.WARNING_MESSAGE);
+                    	note.show(MyUI.getCurrent().getPage());
+            }    
+        });
 	}
 }

@@ -12,6 +12,10 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.MenuBar.MenuItem;
 
 import ihc.MyUI;
+import ihc.views.ExactView;
+import ihc.views.HealthView;
+import ihc.views.HumanitiesView;
+import ihc.views.VocationalTestsView;
 
 import com.vaadin.ui.UI;
 
@@ -36,18 +40,26 @@ public class Header extends HorizontalLayout {
         cursos.addItem("Exatas", new MenuBar.Command() {
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
+				MyUI.getCurrent().getNavigator().removeView("Exact");
+				MyUI.getCurrent().getNavigator().addView("Exact", new ExactView());
 				MyUI.getCurrent().getNavigator().navigateTo("Exact");
 			}
 		});
         cursos.addItem("Humanas", new MenuBar.Command() {
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
+				MyUI.getCurrent().getNavigator().removeView("Humanities");
+				MyUI.getCurrent().getNavigator().addView("Humanities", new HumanitiesView());
 				MyUI.getCurrent().getNavigator().navigateTo("Humanities");
 			}
 		});
         cursos.addItem("Saúde", new MenuBar.Command() {
 			@Override
-			public void menuSelected(MenuItem selectedItem) {MyUI.getCurrent().getNavigator().navigateTo("Health"); }
+			public void menuSelected(MenuItem selectedItem) {
+				MyUI.getCurrent().getNavigator().removeView("Health");
+				MyUI.getCurrent().getNavigator().addView("Health", new HealthView());
+				MyUI.getCurrent().getNavigator().navigateTo("Health"); 
+			}
 		});
         
         MenuItem vocationalTests = navBar.addItem("Testes Vocacionais", null, null); 
@@ -55,6 +67,8 @@ public class Header extends HorizontalLayout {
 			
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
+				MyUI.getCurrent().getNavigator().removeView("OnlineTests");
+				MyUI.getCurrent().getNavigator().addView("OnlineTests", new VocationalTestsView());
 				MyUI.getCurrent().getNavigator().navigateTo("OnlineTests");
 			}
 		});
@@ -80,7 +94,9 @@ public class Header extends HorizontalLayout {
         navBar.addItem("Sobre", null, null);
         navBar.addItem("FAQ", null, new MenuBar.Command() {
             @Override
-            public void menuSelected(MenuItem selectedItem) {MyUI.getCurrent().getNavigator().navigateTo("FAQ"); }
+            public void menuSelected(MenuItem selectedItem) {
+            	MyUI.getCurrent().getNavigator().navigateTo("FAQ"); 
+            	}
         });
         navBar.setWidth("100%");
         addComponent(navBar);

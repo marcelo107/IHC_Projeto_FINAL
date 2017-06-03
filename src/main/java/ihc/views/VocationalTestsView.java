@@ -40,6 +40,6 @@ public class VocationalTestsView extends VerticalLayout implements View {
 
     @Override
     public void enter (ViewChangeListener.ViewChangeEvent event){
-        Notification.show("Bem vindo à página de Exatas.");
+        Notification.show("Bem vindo à página de Testes Vocacionais.");
     }
 }

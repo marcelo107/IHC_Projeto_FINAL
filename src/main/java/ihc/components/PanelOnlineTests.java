@@ -26,6 +26,7 @@ public class PanelOnlineTests extends HorizontalLayout {
         Survey survey = new Survey();
         addComponent(survey);
         setExpandRatio(survey, 20);
+        final InfoProfessionalAptitude newInfo = new InfoProfessionalAptitude();
         onlineTests.addValueChangeListener(new HasValue.ValueChangeListener<Set<String>>() {
 
             @Override
@@ -33,8 +34,9 @@ public class PanelOnlineTests extends HorizontalLayout {
                 Set<String> options = (Set<String>) onlineTests.getValue();
                 for(String option : options){
                     if(option.equals("Aptidão profissional")){
-                        final InfoProfessionalAptitude newInfo = new InfoProfessionalAptitude();
-                        replaceComponent(infoOnlineTests, newInfo);
+                    	if(!components.contains(newInfo)){
+                    		replaceComponent(infoOnlineTests, newInfo);
+                    	}
                     }
                     else {
                     	Notification note = new Notification("Funcionalidade ainda não implementada!", 
