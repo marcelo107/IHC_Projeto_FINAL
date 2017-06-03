@@ -34,3 +34,4 @@ app/
 # Mac
 .DS_Store
 /target/
+target
