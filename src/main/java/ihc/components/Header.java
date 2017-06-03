@@ -90,8 +90,26 @@ public class Header extends HorizontalLayout {
             	note.show(MyUI.getCurrent().getPage());
 			}
 		});
-        navBar.addItem("Vídeos", null, null);
-        navBar.addItem("Sobre", null, null);
+        navBar.addItem("Vídeos", null, new MenuBar.Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				Notification note = new Notification("Funcionalidade ainda não implementada!", 
+            			"Em breve essa funcionalidade estará disponível.", 
+            			Notification.Type.WARNING_MESSAGE);
+            	note.show(MyUI.getCurrent().getPage());
+			}
+		});
+        navBar.addItem("Sobre", null, new MenuBar.Command() {
+			
+			@Override
+			public void menuSelected(MenuItem selectedItem) {
+				Notification note = new Notification("Funcionalidade ainda não implementada!", 
+            			"Em breve essa funcionalidade estará disponível.", 
+            			Notification.Type.WARNING_MESSAGE);
+            	note.show(MyUI.getCurrent().getPage());
+			}
+		});
         navBar.addItem("FAQ", null, new MenuBar.Command() {
             @Override
             public void menuSelected(MenuItem selectedItem) {

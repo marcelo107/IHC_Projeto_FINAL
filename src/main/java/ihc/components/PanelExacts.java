@@ -52,7 +52,6 @@ public class PanelExacts extends HorizontalLayout{
                     			Notification.Type.WARNING_MESSAGE);
                     	note.show(MyUI.getCurrent().getPage());
                     }
-                    coursesList.clear();
                 }
             }
         });
