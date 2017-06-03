@@ -14,6 +14,9 @@ public class HomeCenter extends HorizontalLayout{
 		final Image carousel = new Image();
 		setWidth(30, Sizeable.Unit.CM);
         carousel.setSource(new ThemeResource("./images/ImageTest.jpg"));
+        carousel.setDescription("Alunos da Unb");
+        carousel.setCaptionAsHtml(true);
+        carousel.setCaption("<b><h1>Destaques da semana</h1></b>");
         addComponent(carousel);
         setExpandRatio(carousel, 80);
         setComponentAlignment(carousel, Alignment.MIDDLE_LEFT);
