@@ -1,5 +1,6 @@
 package ihc.components;
 
+import com.vaadin.ui.Button;
 import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.VerticalLayout;
@@ -19,6 +20,9 @@ public class Survey  extends VerticalLayout {
         CheckBox check3Question1 = new CheckBox();
         check3Question1.setCaption("Saúde");
         addComponents(check1Question1, check2Question1, check3Question1);
+        Button acceptQuestion1 = new Button("Enviar resposta");
+        addComponent(acceptQuestion1);
+
         
         TextArea question2 = new TextArea();
         question2.setValue("Questão 2: Você já qual área profissional você irá trabalhar?");
@@ -26,8 +30,10 @@ public class Survey  extends VerticalLayout {
         check1Question2.setCaption("Sim");
         CheckBox check2Question2 = new CheckBox();
         check2Question2.setCaption("Não");
-        
         addComponent(question2);
         addComponents(check1Question2, check2Question2);
+        Button acceptQuestion2 = new Button("Enviar resposta");
+        addComponent(acceptQuestion2);
+
 	}
 }
