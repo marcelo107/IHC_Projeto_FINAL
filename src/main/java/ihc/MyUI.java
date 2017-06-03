@@ -35,6 +35,7 @@ public class MyUI extends UI {
         navigator.addView("Humanities", new HumanitiesView());
         navigator.addView("Health", new HealthView());
         navigator.addView("FAQ", new FAQView());
+        navigator.addView("OnlineTests", new VocationalTestsView());
 
     }
 
