@@ -1547,6 +1547,10 @@ div.v-layout.v-horizontal.v-widget {
 	width: 1000px;
 }
 
+.v-labelinfoStyle {
+	height: 500px;
+}
+
 .mytheme.v-app, .mytheme.v-app-loading {
 	font: 300 16px/1.55 "Open Sans", sans-serif;
 	color: #474747;

@@ -33,7 +33,10 @@
 $v-app-loading-text: "Light Valo";
 
 $v-background-color: hsl(0, 0, 99.5%);
+//$v-background-color: hsl(213, 96, 22.5%);
 $v-app-background-color: #fff;
+//$v-app-background-color: #37383a;
+//$v-app-background-color: #d1ffff;
 $v-focus-color: hsl(218, 80%, 60%);
 $v-border: 1px solid (v-shade 0.6);
 $v-border-radius: 3px;
@@ -69,9 +72,9 @@ $v-error-indicator-color: hsl(349, 66%, 56%);
   width: 1000px;
 }
 
-//.v-label-infoStyle {
-//  height: 500px;
-//}
+.v-labelinfoStyle {
+  height: 500px;
+}
 
 @mixin mytheme {
   @include valo;
