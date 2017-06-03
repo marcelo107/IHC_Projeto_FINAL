@@ -12,6 +12,9 @@ import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.ListSelect;
+import com.vaadin.ui.Notification;
+
+import ihc.MyUI;
 
 /**
  * Created by falbuquerque on 01/06/17.
@@ -42,8 +45,12 @@ public class PanelExacts extends HorizontalLayout{
                         replaceComponent(infoExacts, newInfo);
                     }
                     else {
-                        final Label newInfo = new Label("O curso ainda não possui informações.");
-                        replaceComponent(infoExacts, newInfo);
+//                        final Label newInfo = new Label("O curso ainda não possui informações.");
+//                        replaceComponent(infoExacts, newInfo);
+                    	Notification note = new Notification("Funcionalidade ainda não implementada!", 
+                    			"Em breve essa funcionalidade estará disponível.", 
+                    			Notification.Type.WARNING_MESSAGE);
+                    	note.show(MyUI.getCurrent().getPage());
                     }
                     coursesList.clear();
                 }
