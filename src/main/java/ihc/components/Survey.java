@@ -1,9 +1,6 @@
 package ihc.components;
 
-import com.vaadin.ui.Button;
-import com.vaadin.ui.CheckBox;
-import com.vaadin.ui.TextArea;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 
 public class Survey  extends VerticalLayout {
 	public Survey() {
@@ -12,28 +9,19 @@ public class Survey  extends VerticalLayout {
         TextArea question1 = new TextArea();
         question1.setValue("Questão 1: Em qual área você pretende cursar?");
         addComponent(question1);
-        
-        CheckBox check1Question1 = new CheckBox();
-        check1Question1.setCaption("Exatas");
-        CheckBox check2Question1 = new CheckBox();
-        check2Question1.setCaption("Humanas");
-        CheckBox check3Question1 = new CheckBox();
-        check3Question1.setCaption("Saúde");
-        addComponents(check1Question1, check2Question1, check3Question1);
+        RadioButtonGroup<String> answer1 = new RadioButtonGroup<String>();
+        answer1.setItems("Exatas", "Humanas", "Saúde");
+        addComponent(answer1);
         Button acceptQuestion1 = new Button("Enviar resposta");
         addComponent(acceptQuestion1);
 
-        
         TextArea question2 = new TextArea();
         question2.setValue("Questão 2: Você já qual área profissional você irá trabalhar?");
-        CheckBox check1Question2 = new CheckBox();
-        check1Question2.setCaption("Sim");
-        CheckBox check2Question2 = new CheckBox();
-        check2Question2.setCaption("Não");
         addComponent(question2);
-        addComponents(check1Question2, check2Question2);
+        RadioButtonGroup<String> answer2 = new RadioButtonGroup<String>();
+        answer2.setItems("Sim", "Não");
+        addComponent(answer2);
         Button acceptQuestion2 = new Button("Enviar resposta");
         addComponent(acceptQuestion2);
-
-	}
+    }
 }
