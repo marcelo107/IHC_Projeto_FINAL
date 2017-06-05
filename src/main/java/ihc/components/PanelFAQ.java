@@ -24,6 +24,8 @@ public class PanelFAQ extends HorizontalLayout {
                 text.append(line);
 
             Label faq = new Label(text.toString(), ContentMode.HTML);
+            faq.setSizeFull();
+            faq.setHeight(30, Unit.CM);
             addComponent(faq);
             setExpandRatio(faq, 80);
 

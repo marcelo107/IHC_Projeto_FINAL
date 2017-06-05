@@ -77,6 +77,13 @@ $v-error-indicator-color: hsl(349, 66%, 56%);
   height: 500px;
 }
 
+
+.v-menubar-menuitem-menuRight {
+  position: absolute !important;
+  right: 10px !important;
+  top: 0;
+}
+
 @mixin mytheme {
   @include valo;
 

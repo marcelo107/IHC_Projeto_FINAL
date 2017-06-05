@@ -1551,6 +1551,12 @@ div.v-layout.v-horizontal.v-widget {
 	height: 500px;
 }
 
+.v-menubar-menuitem-menuRight {
+	position: absolute !important;
+	right: 10px !important;
+	top: 0;
+}
+
 .mytheme.v-app, .mytheme.v-app-loading {
 	font: 300 16px/1.55 "Open Sans", sans-serif;
 	color: #c6c7c8;
